@@ -1,0 +1,17 @@
+package com.spring.internal_working.internal_work.validation;
+
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
+
+public class LowerCaseValidator implements ConstraintValidator<Lowercase, String> {
+
+
+    @Override
+    public boolean isValid(String value, ConstraintValidatorContext constraintValidatorContext) {
+        if (value == null || value.length() == 0) {
+            return true;
+
+        }
+        return value.equals(value.toLowerCase());
+    }
+}
