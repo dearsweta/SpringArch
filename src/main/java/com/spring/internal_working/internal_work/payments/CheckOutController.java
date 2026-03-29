@@ -1,17 +1,10 @@
-package com.spring.internal_working.internal_work.controller;
+package com.spring.internal_working.internal_work.payments;
 
-import  com.spring.internal_working.internal_work.dtos.CheckOutRequest;
-import com.spring.internal_working.internal_work.dtos.CheckOutResponse;
 import com.spring.internal_working.internal_work.dtos.ErrorDto;
 import com.spring.internal_working.internal_work.exceptions.CartEmptyException;
 import com.spring.internal_working.internal_work.exceptions.CartNotFoundException;
-import com.spring.internal_working.internal_work.exceptions.PaymentException;
-import com.spring.internal_working.internal_work.repositories.OrderRepository;
-import com.spring.internal_working.internal_work.services.CheckoutService;
-import com.spring.internal_working.internal_work.services.WebhookRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

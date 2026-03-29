@@ -1,4 +1,4 @@
-package com.spring.internal_working.internal_work.exceptions;
+package com.spring.internal_working.internal_work.payments;
 
 import lombok.NoArgsConstructor;
 

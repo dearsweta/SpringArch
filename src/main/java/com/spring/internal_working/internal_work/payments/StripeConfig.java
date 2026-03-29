@@ -1,4 +1,4 @@
-package com.spring.internal_working.internal_work.config;
+package com.spring.internal_working.internal_work.payments;
 
 import com.stripe.Stripe;
 import jakarta.annotation.PostConstruct;

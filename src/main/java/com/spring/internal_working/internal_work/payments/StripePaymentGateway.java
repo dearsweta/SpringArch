@@ -1,9 +1,8 @@
-package com.spring.internal_working.internal_work.services;
+package com.spring.internal_working.internal_work.payments;
 
 import com.spring.internal_working.internal_work.entities.Order;
 import com.spring.internal_working.internal_work.entities.OrderItem;
 import com.spring.internal_working.internal_work.entities.PaymentStatus;
-import com.spring.internal_working.internal_work.exceptions.PaymentException;
 import com.stripe.exception.SignatureVerificationException;
 import com.stripe.exception.StripeException;
 import com.stripe.model.Event;
@@ -12,7 +11,6 @@ import com.stripe.model.checkout.Session;
 import com.stripe.net.Webhook;
 import com.stripe.param.checkout.SessionCreateParams;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -31,7 +29,7 @@ public class StripePaymentGateway implements PaymentGateway {
         try {
             System.out.println("Stripe success URL = " +
                     websiteURL + "/checkout-success?orderId=" + order.getId());
-
+            System.out.println(webhookSecretKey);
             var builder = SessionCreateParams.builder()
                     .setMode(SessionCreateParams.Mode.PAYMENT)
                     .setSuccessUrl(websiteURL + "/checkout-success?orderId=" + order.getId())

@@ -1,4 +1,4 @@
-package com.spring.internal_working.internal_work.dtos;
+package com.spring.internal_working.internal_work.payments;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;

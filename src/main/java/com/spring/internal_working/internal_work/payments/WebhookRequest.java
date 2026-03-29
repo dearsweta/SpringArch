@@ -1,4 +1,4 @@
-package com.spring.internal_working.internal_work.services;
+package com.spring.internal_working.internal_work.payments;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

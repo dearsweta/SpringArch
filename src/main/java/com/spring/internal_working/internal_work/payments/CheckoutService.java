@@ -1,19 +1,13 @@
-package com.spring.internal_working.internal_work.services;
+package com.spring.internal_working.internal_work.payments;
 
-import com.spring.internal_working.internal_work.dtos.CheckOutRequest;
-import com.spring.internal_working.internal_work.dtos.CheckOutResponse;
 import com.spring.internal_working.internal_work.entities.Order;
-import com.spring.internal_working.internal_work.entities.PaymentStatus;
 import com.spring.internal_working.internal_work.exceptions.CartEmptyException;
 import com.spring.internal_working.internal_work.exceptions.CartNotFoundException;
-import com.spring.internal_working.internal_work.exceptions.PaymentException;
 import com.spring.internal_working.internal_work.repositories.CartRepository;
 import com.spring.internal_working.internal_work.repositories.OrderRepository;
-import com.stripe.exception.SignatureVerificationException;
-import com.stripe.model.PaymentIntent;
-import com.stripe.net.Webhook;
+import com.spring.internal_working.internal_work.services.AuthService;
+import com.spring.internal_working.internal_work.services.CartService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
