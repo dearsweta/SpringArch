@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+websiteURL: https://springarch.com
+
+
