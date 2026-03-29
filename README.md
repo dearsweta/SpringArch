@@ -36,7 +36,7 @@ A production-ready eCommerce backend system built using Spring Boot, designed to
 📂 Project Structure:
 
 src/main/java/com/project
-│
+|
 ├── controller     # REST APIs
 ├── service        # Business logic
 ├── repository     # Data access layer
@@ -44,7 +44,6 @@ src/main/java/com/project
 ├── dto            # Data transfer objects
 ├── config         # Security & app configs
 └── exception      # Global exception handling
-
 
 🔐 Authentication Flow:
 1. User registers/logs in
